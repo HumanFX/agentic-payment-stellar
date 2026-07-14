@@ -1,9 +1,17 @@
 # Stellar Integration
 
-Everything below is implemented and running on **Stellar testnet** in this
-submission (pinned commit
-[`513fc7c`](https://github.com/HumanFX/protocol-core/tree/513fc7cf7866b8afc7b57169d8a63130bdcdbf64),
-branch `stella-hackathon`).
+The team represents that everything below is implemented on **Stellar
+testnet** at private source commit
+`513fc7cf7866b8afc7b57169d8a63130bdcdbf64` on branch `stella-hackathon`.
+Source and deployment identifiers are not public; judges can verify them using
+the private evidence pack and live technical walkthrough.
+
+| Private verification field | Placeholder |
+|---|---|
+| Swap contract ID | `<PRIVATE_SWAP_CONTRACT_ID>` |
+| Mock asset contract or SAC ID | `<PRIVATE_MOCK_ASSET_CONTRACT_OR_SAC_ID>` |
+| Deployment transaction | `<PRIVATE_DEPLOYMENT_TX_HASH_OR_EXPLORER_LINK>` |
+| Demonstration swap transaction | `<PRIVATE_SWAP_TX_HASH_OR_EXPLORER_LINK>` |
 
 ## Network context
 

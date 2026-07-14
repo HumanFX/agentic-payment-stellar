@@ -5,14 +5,20 @@
 > mandates, with every payout locked to registered recipients.
 
 ![Demo](https://img.shields.io/badge/demo-Stellar%20testnet-blue)
-![Soroban](https://img.shields.io/badge/Soroban-contracts%20deployed-brightgreen)
+![Soroban](https://img.shields.io/badge/Soroban-judges--only%20verification-orange)
 ![MCP](https://img.shields.io/badge/MCP-integrated-green)
 ![Fiat](https://img.shields.io/badge/fiat%20legs-simulated%2Fsandbox-yellow)
 ![Production](https://img.shields.io/badge/production-not%20ready-red)
 
 **Stellar APAC Hackathon submission — showcase repository.**
-This repo is the entry point: the story, the architecture, the demo guides, and
-links to the implementation repositories at pinned commits.
+This public repo is the entry point for the story, architecture, and demo
+guides. The implementation and deployment identifiers are private. Hackathon
+judges can verify the implementation through an unlisted demo, a live technical
+walkthrough, and a judges-only evidence pack.
+
+> **Evaluation note:** private implementation is not presented as public proof.
+> Replace every `<PLACEHOLDER>` below before submission and give organizers a
+> working verification route.
 
 ---
 
@@ -36,8 +42,7 @@ On HumanFX she does it in two ways — **two doors, one network**:
    network with a scoped key: three allowlisted suppliers, 1,000 USDC/week
    cap, revocable anytime. Claude quotes the market, pays Marco
    non-custodially from its own wallet — and when asked to pay an
-   **unregistered** address, the network refuses. The worst case is a refused
-   transaction, never a lost one.
+   **unregistered** address, the network refuses that payout request.
    → [`docs/self-hosted-agent.md`](docs/self-hosted-agent.md)
 
 The point of an agentic network: it doesn't just execute — it takes the job,
@@ -49,8 +54,10 @@ inside authority the human explicitly grants and can revoke.
 
 | Resource | Link |
 |---|---|
-| Hosted demo UI | `TBD` |
-| Demo video | `TBD` |
+| Hosted demo UI | `<JUDGES_ONLY_DEMO_URL>` |
+| Unlisted demo video | `<UNLISTED_DEMO_VIDEO_URL>` |
+| Judges-only evidence pack | `<PRIVATE_EVIDENCE_PACK_URL>` |
+| Live technical review | `<JUDGE_REVIEW_BOOKING_OR_CONTACT>` |
 | Hosted agent explained | [`docs/hosted-agent.md`](docs/hosted-agent.md) |
 | Self-hosted agent explained (MCP) | [`docs/self-hosted-agent.md`](docs/self-hosted-agent.md) |
 | Architecture | [`docs/architecture.md`](docs/architecture.md) |
@@ -58,12 +65,16 @@ inside authority the human explicitly grants and can revoke.
 | MCP integration guide | [`docs/mcp-integration.md`](docs/mcp-integration.md) |
 | Status matrix | [`docs/status.md`](docs/status.md) |
 
-## Source repositories (pinned)
+## Private implementation references
 
-| Area | Repository | Branch | Pinned commit |
+These repositories intentionally return no public source and cannot be shared.
+The pinned commits identify the reviewed internal versions; implementation
+claims must be supported through the code-free evidence pack and live demo.
+
+| Area | Access | Branch | Pinned commit |
 |---|---|---|---|
-| Protocol Engine, demo UI, MCP server, Soroban contracts, solvers | [`HumanFX/protocol-core`](https://github.com/HumanFX/protocol-core) | `stella-hackathon` | [`513fc7c`](https://github.com/HumanFX/protocol-core/tree/513fc7cf7866b8afc7b57169d8a63130bdcdbf64) |
-| Agent runtime (LangGraph workflows, human-in-the-loop) | [`HumanFX/agentic-runtime`](https://github.com/HumanFX/agentic-runtime) | `development/1.0.0` | [`03cef2e`](https://github.com/HumanFX/agentic-runtime/tree/03cef2ee7c81b5b524ab010180e7b4dfc8acc08c) |
+| Protocol Engine, demo UI, MCP server, Soroban contracts, solvers | Private; not shared | `stella-hackathon` | `513fc7cf7866b8afc7b57169d8a63130bdcdbf64` |
+| Agent runtime (LangGraph workflows, human-in-the-loop) | Private; not shared | `development/1.0.0` | `03cef2ee7c81b5b524ab010180e7b4dfc8acc08c` |
 
 Key paths inside `protocol-core`:
 
@@ -83,8 +94,9 @@ proactive-alix-solver/   Solver on the Stellar USDC rail with sandboxed PHP payo
 
 ## What runs on Stellar today
 
-This is not a roadmap slide — the following is implemented and running on
-**Stellar testnet** in this submission:
+The team represents that the following is implemented on **Stellar testnet**.
+Because source and deployment identifiers are private, judges should validate
+these claims through the private evidence pack and live technical walkthrough:
 
 - **Soroban contracts** (`stellar-contracts/`, Soroban SDK v27):
   `fixed_rate_swap` — a reserve-backed XLM↔USDC swap contract; and
@@ -103,16 +115,16 @@ Full detail: [`docs/stellar-integration.md`](docs/stellar-integration.md).
 
 ## Development status
 
-| Feature | Status | Mode | Notes |
-|---|---:|---|---|
-| Web demo UI | ✅ Available | Testnet | On/off-ramp, swap, limit orders, tracker |
-| Hosted agent chat | ✅ Available | Demo agent | Human confirmation required |
-| Soroban contracts | ✅ Deployed | Stellar testnet | `fixed_rate_swap`, `mock_usdc` |
-| On-chain XLM↔USDC swap | ✅ Available | Testnet | Fixed-rate demo contract |
-| Stellar wallet linking / auth | ✅ Available | Testnet | SIWE-style challenge |
-| MCP server + Stellar tools | ✅ Available | Backend-connected | stdio + streamable HTTP |
-| Quote → intent → route → settlement lifecycle | ✅ Available | Live backend | Full protocol objects |
-| Mandates + recipient allowlist enforcement | ✅ Available | Live backend | Blocks unregistered payouts |
+| Feature | Team status | Public evidence | Judge verification |
+|---|---|---|---|
+| Web demo UI | Implemented | Documentation only | `<JUDGES_ONLY_DEMO_URL>` |
+| Hosted agent chat | Implemented | Documentation only | `<UNLISTED_DEMO_VIDEO_URL>` |
+| Soroban contracts | Deployed to testnet | Contract ID withheld | `<PRIVATE_CONTRACT_PROOF>` |
+| On-chain XLM↔USDC swap | Implemented | Documentation only | `<PRIVATE_TRANSACTION_PROOF>` |
+| Stellar wallet linking / auth | Implemented | Documentation only | `<PRIVATE_AUTH_DEMO>` |
+| MCP server + Stellar tools | Implemented | Tool catalog | `<PRIVATE_MCP_DEMO>` |
+| Quote → intent → route → settlement lifecycle | Implemented | Example payloads | `<PRIVATE_LIFECYCLE_DEMO>` |
+| Mandates + recipient allowlist enforcement | Implemented | Expected behavior | `<PRIVATE_GUARDRAIL_DEMO>` |
 | USDC asset | ⚠️ Mock | Testnet issuer | Not circle-issued USDC |
 | Partner quotes/fills | ⚠️ Mocked | Mock solver | Publishes asked rate; instant fills |
 | Fiat settlement | ⚠️ Simulated | Sandbox | PHP payout edge via Alix sandbox |
@@ -137,10 +149,12 @@ Full detail: [`docs/stellar-integration.md`](docs/stellar-integration.md).
   server-issued actions confirmed by a human or covered by a signed mandate.
 - **Mandates are scoped authority**: per-run caps, weekly caps, recipient
   allowlists, expiry — revocable with one tap.
-- **Registered recipients only.** A tricked, hallucinating, or compromised
-  agent physically cannot pay an unregistered address — the network refuses.
-- **Non-custodial.** Funds rest in the user's or agent's own Stellar wallet
-  between route legs; HumanFX never holds keys or value.
+- **Registered recipients only.** The documented policy rejects payout requests
+  to recipients outside the registered book and mandate allowlist.
+- **Separated custody roles.** User-value keys are not held by the Protocol
+  Engine or MCP server. The hosted agent control plane does hold hosted-agent
+  operational keys; exact signing boundaries are documented for judges in the
+  private architecture review.
 
 Full model: [`docs/security-and-trust.md`](docs/security-and-trust.md).
 

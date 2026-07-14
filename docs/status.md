@@ -1,12 +1,17 @@
 # Status — Real vs Mocked vs Planned
 
-One page of complete honesty about what this submission is.
+One page distinguishing team-reported implementation status from public proof.
+Private deployment evidence must be made available to judges through the
+evidence pack and live technical walkthrough.
 
-## Real and running (Stellar testnet)
+## Implemented according to the team (Stellar mainet sandbox)
+
+The public repository does not independently prove the items in this section.
+Judges should validate them against the private evidence pack and demo.
 
 | Component | Detail |
 |---|---|
-| Soroban contracts | `fixed_rate_swap` (reserve-backed XLM↔USDC) and `mock_usdc` (7-decimal SEP-41) built with Soroban SDK v27, deployed to testnet with reproducible scripts |
+| Soroban contracts | `swap_contract` (reserve-backed XLM↔USDC) and `mock_usdc` (7-decimal SEP-41) built with Soroban SDK v27, deployed to testnet with reproducible scripts |
 | On-chain swaps | Demo UI Swap flow + MCP swap tools return real Soroban invocation descriptors; swaps execute on testnet |
 | Stellar wallet auth | SIWE-style challenge/verify for G… addresses; agentic wallet registry with `chain="stellar"` |
 | Stellar settlement leg | Alix solver pushes USDC over Horizon testnet as the crypto leg, with escrow sweep + reconciliation |
