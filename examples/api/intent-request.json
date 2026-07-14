@@ -1,0 +1,13 @@
+{
+  "kind": "offramp",
+  "context": "b2b",
+  "sell": { "asset": "USDC@stellar", "amount": "500.0000000" },
+  "deliver": { "currency": "PHP", "rail": "instapay" },
+  "recipient": { "ref": "rcp_marco_ab12" },
+  "constraints": {
+    "worstRate": "55.10",
+    "expiresInSeconds": 240
+  },
+  "mandateRef": "m_ex_2231",
+  "memo": "invoice JUN-2026"
+}

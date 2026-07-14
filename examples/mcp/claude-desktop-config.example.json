@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "humanfx": {
+      "command": "node",
+      "args": [
+        "/absolute/path/to/protocol-core/mcp-agent-server/dist/main.js"
+      ],
+      "env": {
+        "BACKEND_CORE_BASE_URL": "http://localhost:3000",
+        "MCP_TRANSPORT": "stdio",
+        "HFX_AGENT_CREDENTIAL": "<scoped-agent-api-key — never commit a real one>"
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "id": "st_20260714_0091",
+  "intentId": "int_20260714_0455",
+  "routeAgreementId": "ra_20260714_0312",
+  "partner": "demo-solver-brasilpay",
+  "status": "completed",
+  "legs": [
+    {
+      "kind": "crypto",
+      "network": "stellar-testnet",
+      "asset": "USDC@stellar",
+      "amount": "500.0000000",
+      "steps": [
+        { "step": "crypto_leg_initiated", "at": "2026-07-14T06:12:03Z" },
+        { "step": "crypto_leg_confirmed", "at": "2026-07-14T06:12:41Z" }
+      ]
+    },
+    {
+      "kind": "fiat",
+      "rail": "pix",
+      "currency": "BRL",
+      "amount": "2699.00",
+      "steps": [
+        { "step": "fiat_leg_initiated", "at": "2026-07-14T06:12:55Z" },
+        { "step": "fiat_leg_confirmed", "at": "2026-07-14T06:13:50Z" }
+      ]
+    }
+  ],
+  "allInRate": "5.42",
+  "feePct": "0.40",
+  "elapsedSeconds": 107,
+  "disclaimer": "Demo environment — testnet assets, mock partner, simulated fiat."
+}
