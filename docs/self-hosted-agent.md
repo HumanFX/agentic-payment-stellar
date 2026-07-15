@@ -46,10 +46,7 @@ can say or call grants itself more.
 ## 2. Joining the network is one command
 
 ```bash
-claude mcp add humanfx \
-  --env HFX_AGENT_CREDENTIAL=hfx_live_•••• \
-  --env BACKEND_CORE_BASE_URL=https://<backend-host> \
-  -- node /path/to/protocol-core/mcp-agent-server/dist/main.js
+claude mcp add -s user --transport http humanfx-stellar https://api-human-fx-stellar.nysm.work/mcp-agent/mcp --header "Authorization: Bearer hfx_agent_******"
 ```
 
 **Underneath:** this is standard MCP — the same server works in Hermes or any
